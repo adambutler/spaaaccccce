@@ -10,6 +10,6 @@ View at http://spaccceeeee.com/
 
 Built by Adam Butler
 
-Based on https://github.com/briancray/PHP-URL-Shortener by 
+Based on https://github.com/briancray/PHP-URL-Shortener 
 
 Some content © Valve Corporation. Portal is a trademark of Valve Corporation.
