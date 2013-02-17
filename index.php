@@ -81,10 +81,10 @@
     </style>
   </head>
   <body>
-    <form method="post" action="lengthen.php" id="shortener">
+    <form method="post" action="lengthen.php" id="lengthener">
       <div><h1>Personality Core 01 - URL Lengthener</h1></div>
       <input type="text" name="longurl" id="longurl">
-      <input type="submit" value="Shorten">
+      <input type="submit" value="Lengthen">
     </form>
     <h1 class="result">Enter URL Above</h1>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
