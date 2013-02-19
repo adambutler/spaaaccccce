@@ -96,7 +96,7 @@
     </form>
     <h1 class="result">Enter URL Above</h1>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js?v=1"></script>
     <p>Built by <a href="http://github.com/adambutler">Adam Butler</a></p>
     <audio>
      <source src="mp3/space.mp3" type='audio/mpeg; codecs="mp3"'>
