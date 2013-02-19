@@ -10,14 +10,23 @@ $ ->
     urlregex.test s
 
   sendRequest = (url) ->
-    console.log 'sending request'
     $.ajax
         data:
           longurl: url
         url: "lengthen.php"
         complete: (XMLHttpRequest, textStatus) ->
-          console.log XMLHttpRequest.responseText
           $(".result").html XMLHttpRequest.responseText
+
+  rotate = ->
+    window.deg = window.deg || 0
+    window.deg += 360
+
+    $('img').css
+      "transform": "rotate(#{window.deg}deg)"
+      "-o-transform": "rotate(#{window.deg}deg)"
+      "-ms-transform": "rotate(#{window.deg}deg)"
+      "-moz-transform": "rotate(#{window.deg}deg)"
+      "-webkit-transform": "rotate(#{window.deg}deg)"
 
 
   $('form').submit (e) ->
@@ -28,3 +37,16 @@ $ ->
       sendRequest(url)
     else
       alert 'Error: Invalid URL'
+
+  rotate()
+  setInterval ->
+    rotate()
+  , 240000
+
+
+
+
+
+
+
+

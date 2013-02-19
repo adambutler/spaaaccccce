@@ -47,14 +47,21 @@
       }
 
       form {
-        background: url('img/space-core.png') center 30px no-repeat;
-        padding-top: 600px;
+        padding-top: 20px;
       }
 
       label {
         display: block;
         margin-bottom: 20px;
         background: #000;
+      }
+
+      img {
+        transition: all 240s linear;
+        -o-transition: all 240s linear;
+        -ms-transition: all 240s linear;
+        -moz-transition: all 240s linear;
+        -webkit-transition: all 240s linear;
       }
 
       input {
@@ -81,6 +88,7 @@
     </style>
   </head>
   <body>
+    <img src="img/space-core.png"/>
     <form method="post" action="lengthen.php" id="lengthener">
       <div><h1>Personality Core 01 - URL Lengthener</h1></div>
       <input type="text" name="longurl" id="longurl">

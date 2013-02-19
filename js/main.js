@@ -2,7 +2,7 @@
 (function() {
 
   $(function() {
-    var getURL, sendRequest, validateURL;
+    var getURL, rotate, sendRequest, validateURL;
     getURL = function(s) {
       if (s.substr(0, 7) !== "http://" && s.substr(0, 8) !== "https://") {
         s = "http://" + s;
@@ -15,19 +15,28 @@
       return urlregex.test(s);
     };
     sendRequest = function(url) {
-      console.log('sending request');
       return $.ajax({
         data: {
           longurl: url
         },
         url: "lengthen.php",
         complete: function(XMLHttpRequest, textStatus) {
-          console.log(XMLHttpRequest.responseText);
           return $(".result").html(XMLHttpRequest.responseText);
         }
       });
     };
-    return $('form').submit(function(e) {
+    rotate = function() {
+      window.deg = window.deg || 0;
+      window.deg += 360;
+      return $('img').css({
+        "transform": "rotate(" + window.deg + "deg)",
+        "-o-transform": "rotate(" + window.deg + "deg)",
+        "-ms-transform": "rotate(" + window.deg + "deg)",
+        "-moz-transform": "rotate(" + window.deg + "deg)",
+        "-webkit-transform": "rotate(" + window.deg + "deg)"
+      });
+    };
+    $('form').submit(function(e) {
       var url;
       e.preventDefault();
       url = getURL($("#longurl").val());
@@ -37,6 +46,10 @@
         return alert('Error: Invalid URL');
       }
     });
+    rotate();
+    return setInterval(function() {
+      return rotate();
+    }, 240000);
   });
 
 }).call(this);
