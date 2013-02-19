@@ -38,6 +38,14 @@ $ ->
     else
       alert 'Error: Invalid URL'
 
+  $(document).keydown (e) ->
+    $('audio')[0].play() if e.keyCode == 32
+
+  $(document).keyup (e) ->
+    if e.keyCode == 32
+      $('audio')[0].pause()
+      $('audio')[0].currentTime = 0 
+
   rotate()
   setInterval ->
     rotate()

@@ -46,6 +46,17 @@
         return alert('Error: Invalid URL');
       }
     });
+    $(document).keydown(function(e) {
+      if (e.keyCode === 32) {
+        return $('audio')[0].play();
+      }
+    });
+    $(document).keyup(function(e) {
+      if (e.keyCode === 32) {
+        $('audio')[0].pause();
+        return $('audio')[0].currentTime = 0;
+      }
+    });
     rotate();
     return setInterval(function() {
       return rotate();
