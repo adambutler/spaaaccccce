@@ -2,7 +2,7 @@
 
 ### About
 
-Make your URL's longer with the Apature Science Remote URL Lengthener
+Make your URL's longer with the Aperture Science Remote URL Lengthener
 
 View at http://spaaaccccce.com/
 
