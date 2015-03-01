@@ -1,4 +1,6 @@
 class Alias < ActiveRecord::Base
+  validates_presence_of :original_url, :lengthened_url
+  validates_uniqueness_of :original_url, :lengthened_url
   before_create :generate_lengthened_url
 
   private
