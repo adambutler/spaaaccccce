@@ -14,10 +14,10 @@
 ActiveRecord::Schema.define(version: 20150301215532) do
 
   create_table "aliases", force: :cascade do |t|
-    t.string   "original_url"
-    t.string   "lengthened_url"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "original_url",   limit: 255
+    t.string   "lengthened_url", limit: 255
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
 end
