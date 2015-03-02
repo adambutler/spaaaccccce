@@ -46,3 +46,4 @@ group :development, :test do
 end
 
 gem "autoprefixer-rails"
+gem "validate_url"
