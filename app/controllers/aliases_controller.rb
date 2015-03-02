@@ -4,9 +4,19 @@ class AliasesController < ApplicationController
   end
 
   def create
-    @alias = Alias.where(original_url: params["alias"]["original_url"]).first_or_create
+    url = Alias.format_url(params["alias"]["original_url"])
+    @alias = Alias.where(original_url: url).first_or_create
     respond_to do |format|
       format.js
+    end
+  end
+
+  def show
+    @alias = Alias.where(lengthened_url: params[:lengthened_url]).first
+    if @alias
+      redirect_to @alias.original_url
+    else
+      redirect_to root_path
     end
   end
 

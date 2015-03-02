@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :aliases
-
+  get "/:lengthened_url", to: "aliases#show"
   root "aliases#new"
 
   # The priority is based upon order of creation: first created -> highest priority.

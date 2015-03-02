@@ -8,6 +8,12 @@ Bundler.require(*Rails.groups)
 
 CONFIG = YAML.load(File.read(File.join(File.dirname(__FILE__), 'spaaaccccce.yml')))
 
+if Rails.env.development?
+  HOST = "http://spaaaccccce.dev"
+else
+  HOST = "http://spaaaccccce.com"
+end
+
 module Spaaaccccce
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
