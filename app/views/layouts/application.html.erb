@@ -3,13 +3,14 @@
 <head>
   <title>Spaaaccccce</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= image_tag "core.png", id: "core", alt: "Animated space core from the game portal" %>
 <%= yield %>
+<%= audio_tag "/audios/space.mp3", id: "audio" %>
 
+  <%= javascript_include_tag 'application' %>
 </body>
 </html>
