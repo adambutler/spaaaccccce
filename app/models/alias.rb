@@ -3,7 +3,7 @@ class Alias < ActiveRecord::Base
   validates_uniqueness_of :original_url, :lengthened_url
   before_validation :format_original_url
   before_validation :generate_lengthened_url
-  validates :original_url, :url => true
+  validates_format_of :original_url, with: /^(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/ix, multiline: true
 
   def full_lengthened_url
     "http://spaaaccccce.com/#{lengthened_url}"
