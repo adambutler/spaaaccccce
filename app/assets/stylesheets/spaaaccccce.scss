@@ -1,3 +1,7 @@
+$blue: #00BBF2;
+$orange: #F1921A;
+$white: #fff;
+
 @keyframes rotating {
   from{
     transform: rotate(0deg);
@@ -8,9 +12,67 @@
 }
 
 body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   background: image-url("space.jpg");
+  text-align: center;
 }
 
 #core {
+  display: block;
+  margin: 40px auto;
   animation: rotating 360s linear infinite;
+  max-width: 100%;
+}
+
+h1 {
+  display: inline-block;
+  font-weight: normal;
+  margin: 40px auto;
+  padding: 5px 10px;
+  background: $blue;
+  background: rgba($blue, 0.8);
+  color: #fff;
+}
+
+input {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  border: none;
+  font-size: 1.3em;
+  font-weight: 100;
+  padding: 15px;
+}
+
+input[type=text] {
+  transition: all 300ms ease-in-out;
+  background: rgba($white, 0.8);
+  width: 300px;
+  &:focus {
+    background: $white;
+    outline: none;
+  }
+  @media all and (max-width: 768px) {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+input[type=submit] {
+  cursor: pointer;
+  text-transform: uppercase;
+  appearance: none;
+  background: $blue;
+  color: #fff;
+}
+
+#link {
+  span, a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.3em;
+    background: $orange;
+    color: $white;
+    margin: 40px 0 20px 0;
+    padding: 5px 10px;
+  }
 }
