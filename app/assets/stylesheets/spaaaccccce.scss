@@ -74,5 +74,7 @@ input[type=submit] {
     color: $white;
     margin: 40px 0 20px 0;
     padding: 5px 10px;
+    max-width: 80%;
+    word-wrap: break-word;
   }
 }
