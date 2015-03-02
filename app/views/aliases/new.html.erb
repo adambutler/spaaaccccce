@@ -1,7 +1,7 @@
 <h1>PERSONALITY CORE 01 - URL LENGTHENER</h1>
 
 <%= form_for @alias, remote: true do |f| %>
-  <%= f.text_field :original_url %>
+  <%= f.text_field :original_url, placeholder: "Enter URL" %>
   <%= f.submit "Create", value: "Lengthen" %>
 <% end %>
 
