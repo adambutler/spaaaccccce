@@ -22,6 +22,9 @@ body {
   margin: 40px auto;
   animation: rotating 360s linear infinite;
   max-width: 100%;
+  @media all and (max-width: 767px) {
+    width: 50%;
+  }
 }
 
 h1 {
@@ -32,6 +35,10 @@ h1 {
   background: $blue;
   background: rgba($blue, 0.8);
   color: #fff;
+
+  @media all and (max-width: 767px) {
+    font-size: 1em;
+  }
 }
 
 input {
@@ -50,7 +57,7 @@ input[type=text] {
     background: $white;
     outline: none;
   }
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 767px) {
     display: block;
     width: 90%;
     margin: 10px auto;
