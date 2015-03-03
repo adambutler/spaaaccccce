@@ -60,7 +60,7 @@ input[type=text] {
 input[type=submit] {
   cursor: pointer;
   text-transform: uppercase;
-  appearance: none;
+  -webkit-appearance: none;
   background: $blue;
   color: #fff;
 }
